@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./load.js" type="module" defer></script>
+    <script src="./timer.js" type="module" defer></script>
+    <script src="./pop.js" type="module" defer></script>
+    <title>Bubble Game</title>
+  </head>
+  <body class="flex-col">
+
+    <div class="loader flex-col" id="finale">
+
+      <div class="flex">
+        <h2 class="h2">Score: <span class="score">0</span></h2>
+        <h2 class="h2">Highest Score: <span class="highestScore"></span></h2>
+      </div>
+     <div class="flex">
+      <button id="Restart">Restart</button>
+     </div>
+
+    </div>
+    
+
+      
+
+    </div>
+
+    <div class="wraper flex-col start">
+      <h1 class="h1">Bubble Game</h1>
+
+      <div class="game">
+        <div class="header flex space-between">
+
+          <div class="flex default">
+           <div class="default head-text">Find: <span id="number">0</span></div>
+           <button class="head-text fit-content button" id="Start">Start</button> 
+          </div>
+          
+
+          <div class="flex default">
+            <div class="default head-text">Score: <span class="score">0</span></div>
+            <div class="default head-text">Timer: <span class="timer">60</span>s</div>
+          </div>
+        </div>
+        <div id="circleContainer" class="flex"></div>
+      </div>
+      <h2 class="h2 right">Highest Score: <span class="highestScore"></span></h2>
+    </div>
+  </body>
+</html>

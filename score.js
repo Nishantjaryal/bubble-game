@@ -1,5 +1,13 @@
 let score = 0
+
+
+
 const score_card = document.querySelectorAll(".score")
+
+export function setScore() {
+    score = 0;
+    score_card.forEach(SC => SC.textContent = score)
+}
 
 const highestScore = document.querySelectorAll(".highestScore")
 const key = "928rty278ry8ryfh9ewr4"
@@ -19,6 +27,3 @@ export function incScore() {
 
 }
 
-export function setScore() {
-    score = 0;
-}

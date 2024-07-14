@@ -1,4 +1,5 @@
-import { elementsConfigured } from "./pop.js"
+
+import { elementsConfigured,pickElement } from "./pop.js"
 import {makeCircles} from "./randomelement.js"
 const container = document.getElementById("circleContainer")
 const restart_button = document.querySelector("#Restart")
@@ -30,6 +31,8 @@ const cleanBoard = () => {
 const load_new = () => {
     cleanBoard()
     load()
+    pickElement()
+
 }
 
 restart_button.addEventListener("click", () => {

@@ -1,10 +1,10 @@
-let time = 60
+let time = 2
 const timer = document.querySelectorAll(".timer")
 const restart_loader = document.getElementById("finale")
 
 export function setTime() {
     restart_loader.style.top = "-100vh"
-    time = 60
+    time = 20
 }
 
 

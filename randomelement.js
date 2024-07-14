@@ -18,7 +18,7 @@ export function makeCircles() {
 
 export function getEle() {
     const number = Math.floor(Math.random() * (circles.length - 1))
-    return  circles[number]
+    return circles[number]
 }
 
 

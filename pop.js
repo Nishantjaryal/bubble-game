@@ -3,7 +3,6 @@ import { incScore, setScore } from "./score.js"
 import { getTime, setTime } from "./timer.js"
 
 
-const circles = document.querySelectorAll(".circles")
 const number = document.querySelector("#number")
 const restart_button = document.querySelector("#Restart")
 let isAllowed = true
@@ -16,7 +15,7 @@ setInterval(() => {
         }
 }, 1000);
 
-const pickElement = () => {
+ export const pickElement = () => {
     number.textContent = getEle()
 }
 
@@ -34,9 +33,10 @@ const manageScores = (circle) => {
 
 
 export function elementsConfigured() {
-
+    const circles = document.querySelectorAll(".circles")
     circles.forEach((circle) => {
         circle.addEventListener("click", () => {
+            console.log(circle)
             manageScores(circle)
         })
     })

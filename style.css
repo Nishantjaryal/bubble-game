@@ -124,6 +124,15 @@ padding: 10px;
     color: white;
 }
 
+#Restart{
+    border: none;
+    padding: 10px 25px;
+    background-color: rgb(255, 255, 255);
+    color: #37b759;
+    font-size: 25px;
+    border-radius: 50px
+}
+
 
 
 .fit-content{

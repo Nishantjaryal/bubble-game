@@ -1,4 +1,4 @@
-import { getEle } from "./randomelement.js"
+import { getEle,circles,setCircles } from "./randomelement.js"
 import { incScore, setScore } from "./score.js"
 import { getTime, setTime } from "./timer.js"
 
@@ -10,39 +10,51 @@ let isTimerStart = false
 
 
 setInterval(() => {
-        if (isTimerStart) {
-            isAllowed = getTime()
-        }
+    if (isTimerStart) {
+        isAllowed = getTime()
+    }
 }, 1000);
 
- export const pickElement = () => {
-    number.textContent = getEle()
+export const pickElement = (circles) => {
+    const num = getEle()
+    console.log(num)
+
+    if (circles[num]) {
+        number.textContent = circles[num]
+    }
+    else {
+        console.log("fuck")
+    }
+
 }
 
 
 
-const manageScores = (circle) => {
+const manageScores = (circle, circles) => {
 
-    if (isAllowed && number.textContent === circle.textContent) {
+    if (isAllowed && number.textContent == circle.textContent) {
+        console.log("manageScores")
+
         incScore()
-        pickElement()
+        pickElement(circles)
     }
 
 
 }
 
 
-export function elementsConfigured() {
-    const circles = document.querySelectorAll(".circles")
-    circles.forEach((circle) => {
-        circle.addEventListener("click", () => {
-            console.log(circle)
-            manageScores(circle)
-        })
-    })
 
+
+
+export function elementsConfigured() {
+    const circleclass = document.querySelectorAll(".circles")
+    circleclass.forEach((circle) => {
+    circle.addEventListener("click", () => {
+        manageScores(circle, circles)
+    })
+})
     isTimerStart = true
-    pickElement()
+    pickElement(circles)
 
 }
 
@@ -50,6 +62,7 @@ export function elementsConfigured() {
 function resetParams() {
     setScore()
     setTime()
+    setCircles()
 }
 
 restart_button.addEventListener("click", () => {

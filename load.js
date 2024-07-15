@@ -33,7 +33,6 @@ const load_new = () => {
     cleanBoard()
     load()
     elementsConfigured()
-
 }
 
 restart_button.addEventListener("click", () => {

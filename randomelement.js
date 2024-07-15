@@ -1,5 +1,10 @@
 const container = document.getElementById("circleContainer")
-let circles = []
+export let circles = []
+
+export function setCircles() {
+    circles = []
+}
+
 const range = 200
 
 function makeNumber() {
@@ -17,8 +22,17 @@ export function makeCircles() {
 }
 
 export function getEle() {
-    const number = Math.floor(Math.random() * (circles.length - 1))
-    return circles[number]
+
+    let prev = 0
+    let now  = Math.floor(Math.random() * (circles.length - 1))
+    if (prev===now){
+        getEle()
+    }
+    else if(prev!==now){
+        prev = now
+    }
+
+
+    return  now
+
 }
-
-

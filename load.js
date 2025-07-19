@@ -11,6 +11,8 @@ const circle_count = 110
 
 
 function load() {
+    cleanBoard()
+
     for (let index = 0; index < circle_count; index++) {
         makeCircles()
     }

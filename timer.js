@@ -1,4 +1,4 @@
-let time = 1
+let time = 60
 const timer = document.querySelectorAll(".timer")
 const restart_loader = document.getElementById("finale")
 
